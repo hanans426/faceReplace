@@ -149,7 +149,7 @@ int drawBeard (vector<vector<Point2f>> landmarks, Mat frame) {
 
             bitwise_or(resizeMat, src_mask, src_mask);
             bitwise_not(src_mask, src_mask);
-            seamlessClone(resizeMat
+            seamlessClone(resizeMat, frame, src_mask, p, frame, MIXED_CLONE);
 
         } catch (exception) {
             cout << "some error happend " << endl;
